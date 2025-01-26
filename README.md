@@ -2,16 +2,15 @@
 
 实践Mujoco Playground。包括安装以及对dm_control_suite、locomotion的测试。
 
-![](https://gitclone.com/download1/playground/sample0.gif)
-![](https://gitclone.com/download1/playground/sample1.gif)
+![](https://gitclone.com/download1/playground/sample0.gif) ![](https://gitclone.com/download1/playground/sample1.gif)
 
 ## 一、环境要求
 
-**GPU：**至少24G显存，因为训练时需要18G左右显存。如RTX4090、RTX3090等
+GPU：至少24G显存，因为训练时需要18G左右显存。如RTX4090、RTX3090等
 
-**操作系统：**Linux，如Ubuntu22.04
+操作系统：Linux，如Ubuntu22.04
 
-**基础软件：**Nvidia显卡驱动、CUDA12.4、Anaconda（Python虚拟环境）
+基础软件：NVIDIA显卡驱动、CUDA12.4、Anaconda（Python虚拟环境）
 
 ## 二、环境安装
 
