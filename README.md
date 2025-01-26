@@ -1,29 +1,35 @@
 # Mujoco Playground实践
 
-实践Mujoco Playground的安装、dm_control_suite和locomotion的测试。
+实践Mujoco Playground。包括安装以及对dm_control_suite、locomotion的测试。
 
 ![](https://gitclone.com/download1/playground/sample0.gif)
 ![](https://gitclone.com/download1/playground/sample1.gif)
 
 ## 一、环境要求
 
-GPU：至少24G显存，因为训练时需要18G左右显存。如RTX4090、RTX3090等
+**GPU：**至少24G显存，因为训练时需要18G左右显存。如RTX4090、RTX3090等
 
-操作系统：Linux，如Ubuntu22.04
+**操作系统：**Linux，如Ubuntu22.04
+
+**基础软件：**Nvidia显卡驱动、CUDA12.4、Anaconda（Python虚拟环境）
 
 ## 二、环境安装
 
 ### 1、安装ffmpeg
 
 ```shell
+# 更新系统
 sudo apt update
+# 安装ffmpeg
 sudo apt install -y ffmpeg
 ```
 
 ### 2、创建虚拟环境
 
 ```shell
+# 建立虚拟环境
 conda create -n mujoco python==3.12 -y
+# 激活虚拟环境
 conda activate mujoco
 ```
 
@@ -42,9 +48,10 @@ pip install -r requirements.txt \
 ### 4、安装JAX GPU版
 
 ```shell
+# 安装jax for CUDA
 pip install "jax[cuda12]" -f \
 https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
-# 验证
+# 验证jax for CUDA安装
 python -c "import jax; print(jax.default_backend())" 
 ```
 
