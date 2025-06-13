@@ -1,6 +1,8 @@
 import distutils.util
 import os
 import subprocess
+
+os.environ['QT_QPA_PLATFORM'] = 'offscreen' #trouble shot with claude
 import cv2
 
 os.environ['MUJOCO_GL'] = 'egl' 
@@ -781,11 +783,17 @@ if __name__ == "__main__" :
     init_env()
     print("LoadQuadrupedalEnv")
     LoadQuadrupedalEnv()
-    print("JoystickTrain")
-    make_inference_fn,params = JoystickTrain()
+    # print("JoystickTrain")
+    # make_inference_fn,params = JoystickTrain()
+    # print("Rollout")
+    # Rollout(make_inference_fn,params)
+
+    # print("Handstand")
+    # make_inference_fn,params = Handstand()
+    # print("Rollout")
+    # Rollout(make_inference_fn,params)
+
+    print("Bipedal")
+    make_inference_fn,params = Bipedal()
     print("Rollout")
     Rollout(make_inference_fn,params)
-    print("Handstand")
-    Handstand()
-    print("Bipedal")
-    Bipedal()

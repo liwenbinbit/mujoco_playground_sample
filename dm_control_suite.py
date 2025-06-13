@@ -35,6 +35,8 @@ import mujoco
 from mujoco import mjx
 import numpy as np
 from orbax import checkpoint as ocp
+
+os.environ['QT_QPA_PLATFORM'] = 'offscreen' #trouble shot with claude
 import cv2
 from mujoco_playground import registry
 from mujoco_playground.config import dm_control_suite_params
